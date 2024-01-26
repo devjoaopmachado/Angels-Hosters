@@ -1,0 +1,105 @@
+:root {
+    --primarycolor: #612975;
+    --primarytextcolor: #612975;
+
+    --secondarycolor: #f0f0f0;
+    --secondarytextcolor: #f0f0f0;
+    --tertiarytextcolor: #585858;
+
+    --spacingparaghafy: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*--STEP01--*/
+
+.header {
+    font-size: var(--spacingparaghafy);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo {
+    text-align: center;
+}
+
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header-nav>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primarycolor);
+    margin: 0;
+    color: var(--secondarytextcolor);
+    padding: 0;
+    width: 100%;
+}
+
+.header-nav>ul>li>a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.4rem  1.6rem;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+
+}
+
+.header-nav>ul>li>a:hover {
+    background-color: #7b3794;
+}
+
+@media screen and (min-width:48.75em) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .header-nav>ul {
+        flex-direction: row;
+        justify-content: center;
+        color: var(--tertiarytextcolor);
+        background-color: inherit;
+        gap: var(--spacingparaghafy);
+    } 
+
+    .header-nav>ul>li>a:hover {
+        background-color: #dfdfdf;
+    }
+
+}
+
+@media screen and (min-width:62.5em) {
+    .header {
+        width: 62.5em;
+        flex-grow: 1;
+        margin: 0 auto;
+
+    }
+
+
+    .header-nav>ul>li a {
+        gap: 10em;
+    }
+
+    .header-nav>ul {
+        gap: var(--spacingparaghafy);
+
+    }
+
+
+}
