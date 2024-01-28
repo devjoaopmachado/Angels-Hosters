@@ -1,38 +1,34 @@
 :root {
     --primarycolor: #612975;
     --primarytextcolor: #612975;
-
-    --secondarycolor: #f0f0f0;
-    --secondarytextcolor: #f0f0f0;
-    --tertiarytextcolor: #585858;
-
+    --primaryhovercolor: #845496;
+    --secondarycolor: #f5e9f8;
+    --secondarytextcolor: #f5e9f8;
     --spacingparaghafy: 1.6rem;
 }
 
 html {
     font-size: 62.5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
 }
 
 /*--STEP01--*/
-
 .header {
     font-size: var(--spacingparaghafy);
     display: flex;
     flex-direction: column;
 }
 
-.header-logo {
-    text-align: center;
+.header-logo>img {
+    display: block;
+    margin: auto;
 }
-
 
 .header-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .header-nav>ul {
@@ -50,56 +46,146 @@ html {
     color: inherit;
     text-decoration: none;
     display: inline-block;
-    padding: 1.4rem  1.6rem;
+    padding: 1.4rem 1.6rem;
     box-sizing: border-box;
     text-align: center;
     width: 100%;
-
 }
 
 .header-nav>ul>li>a:hover {
-    background-color: #7b3794;
+    background-color: var(--primaryhovercolor);
+}
+
+/*--STEP02--*/
+
+.heroBanner {
+    background-color: var(--secondarycolor);
+    text-align: center;
+    padding-bottom: var(--spacingparaghafy);
+    box-sizing: border-box;
+ 
+}
+
+.heroBanner>h1 {
+    color: var(--primarycolor);
+    text-align: center;
+    margin: 0;
+    padding: calc(var(--spacingparaghafy) * 2) ;
+    box-sizing: border-box;
+}
+
+.heroBanner>p {
+    margin: 0;
+    text-align: center;
+    display: block;
+    color: var(--primaryhovercolor);
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: 1.2;
+    padding: 0 var(--spacingparaghafy) var(--spacingparaghafy);
+    box-sizing: border-box;
+}
+
+.btn-heroBanner {
+    display: inline-block;
+    padding: 1rem var(--spacingparaghafy);
+    text-decoration: none;
+    color: var(--secondarytextcolor);
+    border-radius: 5px;
+    background-color: hsl(204, 50%, 50%);
+    font-size: var(--spacingparaghafy); 
 }
 
 @media screen and (min-width:48.75em) {
     .header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem;
+        padding: .5rem;
         box-sizing: border-box;
     }
 
     .header-nav>ul {
         flex-direction: row;
         justify-content: center;
-        color: var(--tertiarytextcolor);
+        color: var(--primarytextcolor);
         background-color: inherit;
         gap: var(--spacingparaghafy);
-    } 
-
-    .header-nav>ul>li>a:hover {
-        background-color: #dfdfdf;
     }
 
+    .header-nav>ul>li>a:hover {
+        background-color: var(--secondarycolor);
+    }
+    
+/*--MEDIASTEP02--*/
+.heroBanner {
+    background-color: var(--primarycolor);
+    background-size: contain;
+}
+.heroBanner>h1 {
+    padding-top: var(--spacingparaghafy);
+}
+.heroBanner>h1 , .heroBanner>p {
+    color: var(--secondarytextcolor);
+    font-weight: 500;
+}
+.heroBanner-span::before {
+    content: url(/images/icon_play.svg);
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    padding-top: var(--spacingparaghafy);
+}
+.heroBanner>p {
+    line-height: 1.5;
+}
 }
 
 @media screen and (min-width:62.5em) {
+/*--MEDIASTEP02--*/
+.heroBanner {
+    background-image: url(/images/bg_topo_1198x670.jpg);
+    background-size: cover;
+    padding: 20rem 0 4em;
+    
+}
+} 
+
+@media screen and (min-width:73.75em) {
     .header {
-        width: 62.5em;
-        flex-grow: 1;
+        width: 73.75em;
         margin: 0 auto;
-
     }
-
-
     .header-nav>ul>li a {
         gap: 10em;
     }
-
     .header-nav>ul {
         gap: var(--spacingparaghafy);
+    }
+/*--MEDIASTEP02--*/
+.heroBanner {
+    background-image: url(/images/bg_topo_1600x1374.jpg);
+    background-size: cover;  
+    padding: 20rem 0;
+}
 
+.heroBanner-span::before {
+    content: url(/images/icon_play.svg);
+    display: inline-block;
+    width: 7.25rem;
+    height: 7.25rem;
+    padding-top: var(--spacingparaghafy);
+}
+
+.heroBanner>h1 , .heroBanner>p {
+    text-shadow:  2px  2px black;
     }
 
+    .heroBanner>h1 {
+        font-size: 2.6rem;
+
+    }
+.heroBanner>p {
+    font-size: 1.8rem;
+}
 
 }
