@@ -14,6 +14,7 @@ A Execução do projeto será versionada, na prática desenvolvendo as etapas co
 
 <li>Step 1 - Desenvolvimento Cabeçalho e Navegação superior da página.</li>
 <li>Step 2 - Desenvolvimento do Banner principal da página.</li>
+<li>Step 3 - Desenvolvimento das informações do Hotel.</li>
 
 </ul>
 
