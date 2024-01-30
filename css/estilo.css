@@ -10,7 +10,14 @@
 html {
     font-size: 62.5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
 }
 
 /*--STEP01--*/
@@ -57,13 +64,13 @@ html {
 }
 
 /*--STEP02--*/
-
 .heroBanner {
     background-color: var(--secondarycolor);
     text-align: center;
     padding-bottom: var(--spacingparaghafy);
     box-sizing: border-box;
 }
+
 .heroBanner>h1 {
     color: var(--primarycolor);
     text-align: center;
@@ -95,22 +102,19 @@ html {
 }
 
 /*--STEP03--*/
-
 .infoHotel {
     background-color: var(--secondarycolor);
     text-align: center;
-    padding-top: var(--spacingparaghafy );
+    padding-top: var(--spacingparaghafy);
     box-sizing: border-box;
- 
 }
 
-
- h2 {
+h2 {
     text-transform: uppercase;
     color: var(--primarytextcolor);
     letter-spacing: .1rem;
     margin: 0;
-    padding:  var(--spacingparaghafy) 0 var(--spacingparaghafy);
+    padding: var(--spacingparaghafy) 0 var(--spacingparaghafy);
     box-sizing: border-box;
 }
 
@@ -124,28 +128,78 @@ html {
     margin: 0;
 }
 
-
-
 /*step grid's 3*/
-
 .row {
     display: flex;
- flex-wrap:wrap;
- gap: 1em;
-
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .col {
     flex: 1 0 auto;
     width: 100%;
-   
 }
 
-.col-md-4 {
+.col4 {
     width: 100%;
 }
 
+/*step 4*/
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--spacingparaghafy);
+    box-sizing: border-box;
+}
+
+.container-main_img>img {
+    display: block;
+    max-width: 100%;
+}
+
+.container-main_description h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--primarytextcolor);
+    font-weight: 500;
+    padding-top: var(--spacingparaghafy);
+    box-sizing: border-box;
+}
+
+.container-main_description p {
+    margin: 0;
+    padding: var(--spacingparaghafy) 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    line-height: 1.15;
+    color: var(--primarycolor);
+}
+
+.footer {
+    background-color: rgb(24, 24, 24);
+    color: var(--secondarytextcolor);
+    text-align: center;
+    padding: calc(var(--spacingparaghafy)*1.5);
+}
+
+@media screen and (min-width:40em) {
+
+    /*--MEDIASTEP04--*/
+    .container-main {
+        flex-wrap: nowrap;
+        gap: var(--spacingparaghafy);
+    }
+
+    .container-main_description h3 {
+        padding-top: 0;
+    }
+}
+
 @media screen and (min-width:48.75em) {
+
     /*--MEDIASTEP01--*/
     .header {
         flex-direction: row;
@@ -194,12 +248,20 @@ html {
         line-height: 1.5;
     }
 
-   /*--MEDIASTEP03--*/
-   .col-sm-2 {
-    width: calc(50% - 1rem);
-  
-   }
+    /*--MEDIASTEP03--*/
+    .col2 {
+        width: calc(50% - 1rem);
+    }
 
+    /*--MEDIASTEP04--*/
+    .container-main {
+        flex-wrap: nowrap;
+        gap: var(--spacingparaghafy);
+    }
+
+    .container-main_description h3 {
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width:62.5em) {
@@ -212,12 +274,10 @@ html {
     }
 
     /*--MEDIASTEP03--*/
-
-
-
 }
 
 @media screen and (min-width:73.75em) {
+
     /*--MEDIASTEP01--*/
     .header {
         width: 73.75em;
@@ -259,24 +319,28 @@ html {
     .heroBanner>p {
         font-size: 1.8rem;
     }
-     /*--MEDIASTEP03--*/
-   
 
-     .infoHotel-container {
-        padding-top: calc( var(--spacingparaghafy) * 1.5 );
-     }
+    /*--MEDIASTEP03--*/
+    .infoHotel-container {
+        padding-top: calc(var(--spacingparaghafy) * 1.5);
+    }
 
-     .infoHotel-container p {
+    .infoHotel-container p {
         font-size: 1.8rem;
-     }
+    }
 
-     .infoHotel-container h2 {
-     font-size: 2.4rem;
+    .infoHotel-container h2 {
+        font-size: 2.4rem;
+    }
 
-     }
+    .col4 {
+        width: calc(25% - 1rem);
+    }
 
-     .col-md-4 {
-        width:calc(25% - 1rem );
-     } 
+    /*step4*/
+    .col-2 {
+        width: calc(50% - 1rem);
+    }
+
 
 }
