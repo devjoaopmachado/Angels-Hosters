@@ -2,11 +2,10 @@
 
 Curso Web Fundamentos da Serliv. 
 
-## Em desenvolvimento
+## Projeto Desenvolvido
 
 O objetivo é desenvolver uma página responsiva. 
-
-A Execução do projeto será versionada. A primeira versão será a resolução do desafio com os conhecimentos adquiridos. A segunda versão será o desenvolvimento da página com a aulas de resolução do curso.   
+   
 
 
 ### Etapas práticas
